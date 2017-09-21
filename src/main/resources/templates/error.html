@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="common/header :: header-css"/>
+</head>
+<body>
+
+<div th:replace="common/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>500 - ERROR</h1>
+        <div th:inline="text">Hello '[[${#httpServletRequest.remoteUser}]]', Error: <p th:utext="${errorMessage}">Error
+            java.lang.NullPointerException</p>.
+        </div>
+        <a href="index" th:href="@{/index}">Back to Home Page</a>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="common/footer :: footer"/>
+
+</body>
+</html>

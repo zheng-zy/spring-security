@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="common/header :: header-css"/>
+</head>
+<body>
+
+<div th:replace="common/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Normal page (No need login)</h1>
+
+        <h1><a th:href="@{/index}">返回主页</a></h1>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="common/footer :: footer"/>
+
+</body>
+</html>
